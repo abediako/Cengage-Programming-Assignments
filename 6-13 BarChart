@@ -1,0 +1,57 @@
+import java.util.Scanner;
+public class BarChart {
+    public static void main (String[] args) {
+        Scanner input = new Scanner(System.in);
+        int artPoints;
+        int bobPoints;
+        int calPoints;
+        int danPoints;
+        int eliPoints;
+       
+        System.out.print("Enter points earned by Art >> ");
+        artPoints = input.nextInt();
+        System.out.print("Enter points earned by Bob >> ");
+        bobPoints = input.nextInt();
+        System.out.print("Enter points earned by Cal >> ");
+        calPoints = input.nextInt();
+        System.out.print("Enter points earned by Dan >> ");
+        danPoints = input.nextInt();
+        System.out.print("Enter points earned by Eli >> ");
+        eliPoints = input.nextInt();
+        System.out.println("\nPoints for Game\n");
+
+        drawChart("Art ", artPoints);
+        drawChart("Bob ", bobPoints);
+        drawChart("Cal ", calPoints);
+        drawChart("Dan ", danPoints);
+        drawChart("Eli ", eliPoints);
+       // Write your code here to draw charts using
+       //drawChart method that you have to create below
+	   //You will need to “send in” the player’s name and
+      //the score variable for each of the 5 players
+
+    }
+
+
+ public static void drawChart(String name, int points)
+   {
+       
+       //display the player's name with a print statement
+       System.out.print(name);
+       
+ 
+      
+       //use a FOR-LOOP to print an asterisk for each point
+       //the player scored on the same line as their name
+       for(int score=0 ;score < points;score++)
+       {
+           System.out.print("*");
+       }
+      
+       //outside of the FOR-LOOP, make a new line to prepare
+  //for the info of the next player
+       
+        System.out.println("\n\n");
+ 
+   }
+}
