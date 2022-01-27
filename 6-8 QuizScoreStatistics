@@ -1,0 +1,97 @@
+import java.util.*;
+public class QuizScoreStatistics
+{
+   public static void main (String args[])
+   {
+       // Declare and create a scanner
+       
+  Scanner input = new Scanner(System.in);
+ 
+ 
+       /*declare variables for user input, number of valid 
+    scores that were entered, high score,
+         low score, and the total sum for all scores entered.
+         Some of the variables will need to have an initial  
+         value in order to be used
+       */
+    int userInput;
+    int numberOfValidScores = 0;
+    int highScore;
+    int lowScore; 
+    int sum;
+    int totalScores = 0;
+ 
+ 
+ 
+ 
+       //ask for the first value from the user
+       System.out.println("Enter a score >>");
+       userInput = input.nextInt();
+ 
+ 
+       //assign the user input to the high and low values
+       //so we have a value to compare to later
+     highScore = userInput;
+     lowScore = userInput;
+ 
+ 
+ 
+ 
+       //use a while loop to keep repeating stuff until the user 
+       //types 99 to stop
+       while(userInput != 99)
+       {
+           //see IF the user entered a valid value and inform 
+           //them they messed up
+           if(userInput > 10 || userInput < 0) 
+           {
+               System.out.println("Score must be between 10 and 0");
+           }
+ 
+ 
+           //else perform the required operations described in 
+           //the instructions
+           else
+           {
+               //increment the valid score counter
+    
+               numberOfValidScores++;
+ 
+ 
+               //update the total values of all scores
+              totalScores += userInput;
+           
+            //change the low score value and the high score
+            //value IF they are different based on the
+            //new input from the user
+            if (highScore > userInput)
+            {
+                highScore = userInput;
+            }
+               
+            else
+            {
+                lowScore = userInput;
+            }
+ 
+           }
+           //ask the user for more input or to quit the program
+            System.out.println("Enter another score or 99 to quit >> ");
+            userInput = input.nextInt();
+       }
+       //display the required results for valid scores, high   
+       //score, and low score
+      System.out.println(numberOfValidScores +" valid scores were entered");
+      System.out.println("Highest was "+highScore);
+      System.out.println("Lowest was "+lowScore);
+       
+ 
+ 
+ 
+       //calculate the average score as a double value
+       double averageScore = (double)totalScores/numberOfValidScores;
+       //display the average score
+        System.out.println("Average was "+ averageScore);
+
+           }
+}
