@@ -1,0 +1,65 @@
+import java.util.Scanner;
+public class Inbetween {
+    public static void main (String args[]) 
+    {
+         //1--declare a Scanner to get keyboard input
+    Scanner keyboard = new Scanner(System.in);
+    //2--declare variables to hold two numbers from the user
+    int firstNum;
+    int secondNum;
+    //3--declare variable to hold the answer to the subtraction problem
+    int answer;
+
+    //4--get the first number from the user and store it in the variable
+    System.out.println("Give me a number");
+    firstNum = keyboard.nextInt();
+ 
+
+//5--get the second number from the user and store it in the variable
+    System.out.println("Give me another number");
+    secondNum = keyboard.nextInt();
+
+
+
+
+//6-- perform the subtraction operation and store the answer
+
+answer = firstNum-secondNum;
+
+
+
+//7-- check to see IF the answer is a 1 or -1 or a 0. If so, there are no numbers between the input values from the user
+if(answer == -1 || answer == 0 || answer == 1)
+{
+    System.out.println("There are no integers between " + firstNum + " and " + secondNum);
+}
+
+//8-- if there are values between the input from the user use a For-Loop to iterate through and 
+
+else
+{
+    if(firstNum < secondNum)
+    {
+        for(int newOne = firstNum+1; newOne < secondNum; newOne++) 
+        {
+            System.out.println(newOne);
+        }
+    }
+
+    else
+    {
+      for(int newTwo = secondNum+1; newTwo < secondNum; newTwo++) 
+        {
+            System.out.println(newTwo);
+        }  
+    }
+    
+}
+
+
+//display each number that lies between the lowest number
+//input by the user and the highest number input by the user. Design your code
+//in such a way to it will loop through all the values regarless if the user
+//entered a small number first and then a bigger number or vice versa.
+    }
+}
