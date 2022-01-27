@@ -1,0 +1,37 @@
+import java.util.*;
+public class EvenEntryLoop {
+
+//1--declare a Scanner to get keyboard input
+    public static void main (String args[]) {
+        Scanner keyboard = new Scanner(System.in);
+    
+    int userInput;
+    int result;
+    System.out.println("Type an even number or 999 to exit: ");
+    userInput = keyboard.nextInt();
+
+    
+    while(userInput != 999)
+    {
+
+        result = userInput % 2;
+        if(result !=0)
+        {
+            System.out.println(userInput + " is not an even     number");
+            System.out.println("Type an even number or 999 to exit: ");
+            userInput = keyboard.nextInt();
+            
+        }
+        else
+        {
+            System.out.println("Good Job!");
+            System.out.println("Type an even number or 999 to exit: ");
+            userInput = keyboard.nextInt();
+        }
+        
+    }
+
+    
+        
+}
+}
