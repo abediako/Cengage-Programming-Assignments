@@ -1,0 +1,57 @@
+import java.util.Scanner;
+
+class EvenOdd
+{
+
+    public static void main(String[] args)
+    {
+        //declare a Scanner to get input
+        Scanner userInput = new Scanner(System.in);
+        //declare a variable to hold the input
+        int userNum;
+
+        //ask the user for the number and store it in the variable
+        System.out.println("Enter a number: ");
+        userNum = userInput.nextInt();
+
+        //use an if statement to display that the number was either odd or even.
+
+        //You will run the isEven method and use the boolean variable that is returned to make the determination
+        if(isEven(userNum) == false)
+        {
+            System.out.println("That number is ODD");
+        }
+        else
+        {
+            System.out.println("That number IS even");
+        }
+    }
+
+//this method needs a number in order to run
+
+//after running, it will send back either true or false 
+
+    public static boolean isEven(int userNum)
+        {
+        //make a local boolean variable to hold the true or false answer
+        boolean numIsEven;
+    
+
+//design an if-statement that will use the modulus operation to decide if the
+//number is even or odd and assign the boolean variable to be true or false
+        if(userNum%2 != 0)
+            {
+                numIsEven = false;
+            }
+        else
+            {
+                numIsEven = true;
+            }
+
+return numIsEven;
+
+
+
+        }
+
+}
