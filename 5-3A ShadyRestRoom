@@ -1,0 +1,38 @@
+import java.util.Scanner;
+public class ShadyRestRoom 
+{
+    public static void main (String args[]) 
+    {
+         Scanner keyboard = new Scanner(System.in);
+         int userInput;
+
+        //menu options 
+        System.out.println("Menu");
+        System.out.println("(1) Queen Bed");
+        System.out.println("(2) King Bed");
+        System.out.println("(3) Suite with a king bed and a pull-out couch");
+
+        System.out.println("Enter Selction: 1, 2, or 3: ");
+        userInput = keyboard.nextInt();
+
+        if(userInput == 1)
+            {
+                System.out.println("You selected Queen Bed for $125");
+            }
+
+            else if(userInput == 2)
+            {
+                System.out.println("You selected King Bed for $139");
+            }
+
+            else if(userInput == 3)
+            {
+                System.out.println("You selected Suite with a king bed and a pull-out couch for $165");
+            }
+
+            else
+            {
+                System.out.println("You selected an invalid option for $0");
+            }
+    }
+}
