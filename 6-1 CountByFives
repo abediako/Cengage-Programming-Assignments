@@ -1,0 +1,18 @@
+public class CountByFives {
+    public static void main (String args[]) {
+        int number = 5;
+        while(number < 505)
+        {
+            System.out.print(number + " ");
+
+            if(number%50 == 0)
+            {
+                System.out.println(" ");
+            }
+
+            number = number + 5;
+
+            
+        }
+    }
+}
