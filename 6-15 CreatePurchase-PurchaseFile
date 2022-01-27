@@ -1,0 +1,46 @@
+public class Purchase {
+   private int invoiceNumber;
+   private double saleAmount;
+   private double tax;
+   private static final double RATE = 0.05;
+ 
+
+   public void setInvoiceNumber(int num)
+   {
+       //assign the value of the private variable
+       //invoice number in this class to the value
+       //passed into this method from num
+        invoiceNumber = num;
+ 
+   }
+   public void setSaleAmount(double amt)
+   {
+       //assign the value of the private variable
+       //saleAmount in this class to the value passed
+       //into this method from amt
+        saleAmount = amt;
+       //also calculate the sales tax
+        tax = amt*RATE;
+ 
+   }
+   public double getSaleAmount()
+   {
+       //to "return" the saleAmount value
+       //whenever this method is called
+       //you need to add a return statement to this method
+        return saleAmount;
+   }
+   public int getInvoiceNumber()
+   {
+       //to "return" the invoiceNumber value
+       //whenever this method is called
+       //you need to add a return statement to this method
+        return invoiceNumber;
+ 
+   }
+   public void display()
+   {
+       System.out.println("Invoice #" + invoiceNumber +
+                          "  Amount of sale: $" + saleAmount + "  Tax: $" + tax);
+   }
+}
